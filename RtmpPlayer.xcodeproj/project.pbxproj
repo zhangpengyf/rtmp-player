@@ -13,6 +13,7 @@
 		6E65559C1E2DC82A00EEA015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E65559A1E2DC82A00EEA015 /* Main.storyboard */; };
 		6E65559E1E2DC82A00EEA015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E65559D1E2DC82A00EEA015 /* Assets.xcassets */; };
 		6E6555A11E2DC82A00EEA015 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E65559F1E2DC82A00EEA015 /* LaunchScreen.storyboard */; };
+		6E6555AA1E2DCB5C00EEA015 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E6555A91E2DCB5C00EEA015 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6E65559D1E2DC82A00EEA015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E6555A01E2DC82A00EEA015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E6555A21E2DC82A00EEA015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E6555A91E2DCB5C00EEA015 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E6555AA1E2DCB5C00EEA015 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 			children = (
 				6E6555901E2DC82A00EEA015 /* RtmpPlayer */,
 				6E65558F1E2DC82A00EEA015 /* Products */,
+				6E6555A81E2DCB5C00EEA015 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +81,14 @@
 				6E6555921E2DC82A00EEA015 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6E6555A81E2DCB5C00EEA015 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E6555A91E2DCB5C00EEA015 /* libz.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +215,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -250,6 +263,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -272,9 +286,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SJLJ7FNL93;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "./FFmpeg-iOS/include/";
 				INFOPLIST_FILE = RtmpPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "./FFmpeg-iOS/lib";
+				OTHER_LDFLAGS = (
+					"-lavcodec",
+					"-lavutil",
+					"-lswresample",
+					"-lavformat",
+					"-lswscale",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangpengyf.RtmpPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -285,9 +309,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SJLJ7FNL93;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "./FFmpeg-iOS/include/";
 				INFOPLIST_FILE = RtmpPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "./FFmpeg-iOS/lib";
+				OTHER_LDFLAGS = (
+					"-lavcodec",
+					"-lavutil",
+					"-lswresample",
+					"-lavformat",
+					"-lswscale",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangpengyf.RtmpPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

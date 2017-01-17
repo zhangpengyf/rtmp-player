@@ -1,3 +1,34 @@
 dependencies: \
   /Users/zhangpeng/code/RtmpPlayer/RtmpPlayer/ViewController.m \
-  /Users/zhangpeng/code/RtmpPlayer/RtmpPlayer/ViewController.h
+  /Users/zhangpeng/code/RtmpPlayer/RtmpPlayer/ViewController.h \
+  FFmpeg-iOS/include/libavcodec/avcodec.h \
+  FFmpeg-iOS/include/libavutil/samplefmt.h \
+  FFmpeg-iOS/include/libavutil/avutil.h \
+  FFmpeg-iOS/include/libavutil/common.h \
+  FFmpeg-iOS/include/libavutil/attributes.h \
+  FFmpeg-iOS/include/libavutil/version.h \
+  FFmpeg-iOS/include/libavutil/avconfig.h \
+  FFmpeg-iOS/include/libavutil/mem.h \
+  FFmpeg-iOS/include/libavutil/error.h \
+  FFmpeg-iOS/include/libavutil/mathematics.h \
+  FFmpeg-iOS/include/libavutil/rational.h \
+  FFmpeg-iOS/include/libavutil/intfloat.h \
+  FFmpeg-iOS/include/libavutil/intfloat_readwrite.h \
+  FFmpeg-iOS/include/libavutil/log.h \
+  FFmpeg-iOS/include/libavutil/pixfmt.h \
+  FFmpeg-iOS/include/libavutil/old_pix_fmts.h \
+  FFmpeg-iOS/include/libavutil/buffer.h \
+  FFmpeg-iOS/include/libavutil/cpu.h \
+  FFmpeg-iOS/include/libavutil/channel_layout.h \
+  FFmpeg-iOS/include/libavutil/dict.h \
+  FFmpeg-iOS/include/libavutil/frame.h \
+  FFmpeg-iOS/include/libavcodec/version.h \
+  FFmpeg-iOS/include/libavcodec/old_codec_ids.h \
+  FFmpeg-iOS/include/libavformat/avformat.h \
+  FFmpeg-iOS/include/libavformat/avio.h \
+  FFmpeg-iOS/include/libavformat/version.h \
+  FFmpeg-iOS/include/libswscale/swscale.h \
+  FFmpeg-iOS/include/libswscale/version.h \
+  FFmpeg-iOS/include/libavutil/time.h \
+  FFmpeg-iOS/include/libswresample/swresample.h \
+  FFmpeg-iOS/include/libswresample/version.h
